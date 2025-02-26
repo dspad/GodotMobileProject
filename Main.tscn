@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://drak1t1a1ml4x"]
+
+[ext_resource type="FontFile" uid="uid://c3tfupipflthx" path="res://Font/kenvector_future_thin.ttf" id="1_5bxrc"]
+[ext_resource type="Texture2D" uid="uid://bdneiybwbcdtv" path="res://PNG/green_button04.png" id="1_m6ynj"]
+[ext_resource type="Texture2D" uid="uid://cq1ldb4hl1x04" path="res://PNG/green_button05.png" id="2_qg5cr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vhms"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ric5h"]
+texture = ExtResource("1_m6ynj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gfgl7"]
+texture = ExtResource("2_qg5cr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxqh4"]
+texture = ExtResource("1_m6ynj")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -53.0
+offset_right = 238.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_5bxrc")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxTexture_7vhms")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ric5h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gfgl7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uxqh4")
+text = "Increase"
