@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy2eewv4t51ne"]
+[gd_scene load_steps=9 format=3 uid="uid://dy2eewv4t51ne"]
 
 [ext_resource type="FontFile" uid="uid://c3tfupipflthx" path="res://Font/kenvector_future_thin.ttf" id="1_4rgm4"]
+[ext_resource type="Script" path="res://menu.gd" id="1_ah18p"]
 [ext_resource type="Texture2D" uid="uid://bud12dwhwxt5i" path="res://PNG/blue_button04.png" id="2_j1fb6"]
 [ext_resource type="Texture2D" uid="uid://dnh2gaoxcxuhe" path="res://PNG/blue_button05.png" id="3_36ei0"]
 
@@ -22,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ah18p")
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 1
@@ -57,3 +59,5 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_4rgm4")
 theme_override_font_sizes/font_size = 125
 text = "Clicker game"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
