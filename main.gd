@@ -14,8 +14,6 @@ func _on_increase_score_button_pressed() -> void:
 
 func _on_time_left_timer_timeout() -> void:
 	time_left -= 1
-	if time_left > 0:
-		$TimeLeftLabel.text = "Time left: 0" + str(time_left) + "s"
-	else:
-		print("Game Over")
-		$TimeLeftTimer.stop()
+	$TimeLeftLabel.text = "Time left: 0" + str(time_left) + "s"
+	if time_left == 0:
+		get_tree().change_scene_to_file("res://Lose.tscn")
