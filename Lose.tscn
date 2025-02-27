@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://cx2g0v10jcx73"]
+
+[ext_resource type="FontFile" uid="uid://c3tfupipflthx" path="res://Font/kenvector_future_thin.ttf" id="1_l76bp"]
+[ext_resource type="Texture2D" uid="uid://bud12dwhwxt5i" path="res://PNG/blue_button04.png" id="2_s80jg"]
+[ext_resource type="Texture2D" uid="uid://dnh2gaoxcxuhe" path="res://PNG/blue_button05.png" id="3_fs0jd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnwui"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_klb65"]
+texture = ExtResource("2_s80jg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3kbqy"]
+texture = ExtResource("3_fs0jd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8icqx"]
+texture = ExtResource("2_s80jg")
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YouLoseLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -205.0
+offset_top = 69.0
+offset_right = 205.0
+offset_bottom = 166.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_l76bp")
+theme_override_font_sizes/font_size = 100
+text = "you lose!"
+
+[node name="HomeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -138.0
+offset_right = 134.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_l76bp")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxTexture_hnwui")
+theme_override_styles/hover = SubResource("StyleBoxTexture_klb65")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3kbqy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8icqx")
+text = "Home"
+
+[node name="PlayAgainButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -28.0
+offset_right = 261.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_l76bp")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxTexture_hnwui")
+theme_override_styles/hover = SubResource("StyleBoxTexture_klb65")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3kbqy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8icqx")
+text = "Play Again
+"
