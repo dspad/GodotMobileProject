@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_84wu7")
+aim_score = 7
 time_left = 10
 
 [node name="IncreaseScoreButton" type="Button" parent="."]
